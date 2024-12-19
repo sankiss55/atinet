@@ -748,7 +748,7 @@ document
     title_INE.textContent = 'Escanea la parte de atrás';
     demosSection.style.display = "block";
     tarjeta_ocr_reverso.style.display = "none";
-    presicion_ocr=0.30;
+    presicion_ocr=0.60;
     if (stream_g) {
       stream_g.getVideoTracks().forEach(track => (track.enabled = true));
       console.log("Cámara reanudada");

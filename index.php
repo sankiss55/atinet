@@ -1,6 +1,6 @@
 <?php
-include('/home3/atinet65/notariosatinet.com.mx/utilerias_appliweb/conexion.php');
-//include('conexion.php');
+//include('/home3/atinet65/notariosatinet.com.mx/utilerias_appliweb/conexion.php');
+include('conexion.php');
 ?>
 
 <!DOCTYPE html>
@@ -40,60 +40,60 @@ include('/home3/atinet65/notariosatinet.com.mx/utilerias_appliweb/conexion.php')
     <!-- v5 -->
 
     <style>
-        .result {
-            background-color: #4CAF50;
-            color: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            margin-bottom: 20px;
-        }
+    .result {
+        background-color: #4CAF50;
+        color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px;
+    }
 
-        .row {
-            display: flex;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
+    .row {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
 
 
-        #mensaje4 {
-            margin-top: -30px !important;
-            top: -30px !important;
-        }
+    #mensaje4 {
+        margin-top: -30px !important;
+        top: -30px !important;
+    }
 
-        #ventana_popul {
-            z-index: 999;
-            display: none;
-            background-color: #dc3545;
-            border-radius: 12px;
-            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            padding: 25px;
-            width: 600px;
-            max-width: 90%;
+    #ventana_popul {
+        z-index: 999;
+        display: none;
+        background-color: #dc3545;
+        border-radius: 12px;
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 25px;
+        width: 600px;
+        max-width: 90%;
 
-        }
+    }
 
-        #reader__status_span {
-            display: none;
-        }
+    #reader__status_span {
+        display: none;
+    }
 
-        #reader span a {
-            display: none;
-        }
+    #reader span a {
+        display: none;
+    }
 
-        #reader {
-            border: 2px dashed #2196F3;
-            margin-left: 50%;
-            transform: translateX(-50%);
-            padding: 15px;
-            background-color: #f9f9f9;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.8);
-        }
+    #reader {
+        border: 2px dashed #2196F3;
+        margin-left: 50%;
+        transform: translateX(-50%);
+        padding: 15px;
+        background-color: #f9f9f9;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.8);
+    }
     </style>
 </head>
 
@@ -220,11 +220,11 @@ include('/home3/atinet65/notariosatinet.com.mx/utilerias_appliweb/conexion.php')
 
                             </div>
                             <div class="grid_1Comp">
-                                <label class="inputGrid1_Text">País de Nacimiento</label>
+                                <label class="inputGrid1_Text">Pais de Nacimiento</label>
                                 <label class="inputGrid2_Text">Nacionalidad</label>
 
                                 <select name="paisnac" id="paisnac" class="input3 inputGrid1">
-                                    <option id="opcion_nacimiento" value=" ">País de Nacimiento:</option>
+                                    <option id="opcion_nacimiento" value=" ">Pais de Nacimiento:</option>
                                     <?php
                                     $query =  $conexion2->query("SELECT * FROM catpaises");
                                     while ($valores = mysqli_fetch_array($query)) {
@@ -286,8 +286,8 @@ include('/home3/atinet65/notariosatinet.com.mx/utilerias_appliweb/conexion.php')
 
 
                             </div>
-                            <div class="diaText">
-                                <span> Fecha De Nacimiento</span>
+                            <div>
+                                <span>Fecha De Nacimiento</span>
                             </div>
                             <div class="grid-1">
                                 <input type="date" id="dia" name="dia" placeholder="Dia" class="input3">
@@ -311,7 +311,7 @@ include('/home3/atinet65/notariosatinet.com.mx/utilerias_appliweb/conexion.php')
                                     class="input-48 input-100 input3 inputGrid2">
                                     <option value="">Tipo de cónyuge</option>
                                     <option value="Sociedad conyugal">Sociedad Conyugal</option>
-                                    <option value="Separacion de bienes">Separación de bienes</option>
+                                    <option value="Separacion de bienes">Separacion de bienes</option>
                                 </select>
                             </div>
 
@@ -334,39 +334,46 @@ include('/home3/atinet65/notariosatinet.com.mx/utilerias_appliweb/conexion.php')
 
                             <div class="grid_1Comp">
 
-                                <label class="inputGrid1_Text">Nombre Cónyuge</label>
-                                <label class="inputGrid2_Text">Apellido Paterno Cónyuge</label>
+                                <label class="inputGrid1_Text">Estado Civil</label>
+                                <label class="inputGrid2_Text">Tipo de
+                                    cónyuge</label>
 
                                 <input type="text" name="nombre_conyugue" id="nombre_conyuge" placeholder="Nombre (s)"
-                                    class="input3 datos_conyugal inputGrid1">
+                                    class="input3 datos_conyugal">
 
                                 <input type="text" name="apellidopat_conyugue" id="apellidopat_conyugue"
-                                    placeholder="Apellido Paterno" class="input3 datos_conyugal inputGrid2">
+                                    placeholder="Apellido Paterno" class="input3 datos_conyugal">
 
                             </div>
 
                             <div class="grid_1Comp">
 
-                                <label class="inputGrid1_Text">Apellido Materno Cónyuge</label>
-                                <label class="inputGrid2_Text">Documento de Identificación</label>
+                            </div>
+
+                            <div class="grid_1Comp">
+
+                            </div>
+
+                            <div class="grid_1Comp">
+
+                            </div>
+
+                            <div class="grid-5">
+
+
 
                                 <input type="text" name="apellidomat_conyugue" id="apellidomat_conyugue"
-                                    placeholder="Apellido Materno" class="input3 datos_conyugal inputGrid1">
+                                    placeholder="Apellido Materno" class="input3 datos_conyugal">
 
                                 <input type="text" name="doc_id" placeholder="Doc. Identificación" id="doc_id"
-                                    class="input3 inputGrid2">
+                                    class="input3">
 
-                            </div>
-
-                            <div class="grid_1Comp">
-
-                                <label class="inputGrid1_Text">Número del Documento de Identificación</label>
-                                <label class="inputGrid2_Text">Autoridad Emisora</label>
                                 <input type="number" name="num_doc_id" placeholder="Num. Doc. Identificación"
                                     class="input3 datos_conyugal">
 
                                 <input type="text" name="autoridad_emisora" id="autoridad_emisora"
                                     placeholder="Autoridad Emisora" class="input3 datos_conyugal">
+
                             </div>
 
                         </div>
@@ -383,59 +390,44 @@ include('/home3/atinet65/notariosatinet.com.mx/utilerias_appliweb/conexion.php')
                     <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                         <div class="accordion-body">
 
+
+
                             <div>
                                 <br>
-                                <span>Domicilio Particular</span><br><br>
+                                <span>Domicilio Particular</span><br>
                             </div>
 
-                            <div class="grid_2Comp">
-                                <label class="inputGrid1_TextDos">Calle</label>
-                                <label class="inputGrid2_TextDos">No. Exterior</label>
-                                <label class="inputGrid3_TextDos">No. Interior</label>
+                            <div class="grid-3">
+                                <input type="text" id="calle" name="calle" placeholder="Calle" class="input3">
 
-                                <input type="text" id="calle" name="calle" placeholder="Calle" class="input3 inputGrid1_Dos">
 
-                                <input type="text" id="ext" name="ext" placeholder="No.Ext" class="input3 inputGrid2_Dos">
 
-                                <input type="text" id="int" name="int" placeholder="No.Int" class="input3 inputGrid3_Dos">
+                                <input type="text" id="ext" name="ext" placeholder="No.Ext" class="input3">
 
-                            </div>
+                                <input type="text" id="int" name="int" placeholder="No.Int" class="input3">
 
-                            <div class="grid_3Comp">
-                                <label class="inputGrid1_TextTres">Manzana</label>
-                                <label class="inputGrid2_TextTres">Lote</label>
-                                <label class="inputGrid3_TextTres">Código Postal</label>
-                                <label class="inputGrid4_TextTres">Colonia</label>
+                                <input type="text" id="manzana" name="manzana" placeholder="Manzana" class="input3">
 
-                                <input type="text" id="manzana" name="manzana" placeholder="Manzana" class="input3 inputGrid1_Tres">
+                                <input type="number" id="lote" name="lote" placeholder="Lote" class="input3 ">
 
-                                <input type="number" id="lote" name="lote" placeholder="Lote" class="input3 inputGrid2_Tres">
-
-                                <input type="number" id="cp" name="cp" placeholder="Codigo Postal" class="input3 inputGrid3_Tres"
+                                <input type="number" id="cp" name="cp" placeholder="Codigo Postal" class="input3"
                                     oninput="buscarCodigoYColonias()">
 
-                                <select name="colonia" id="colonia" class="input3 inputGrid4_Tres">
+
+
+                                <select name="colonia" id="colonia" class="input3">
                                     <option value="">Selecciona una colonia </option>
                                 </select>
-
-                            </div>
-
-                            <div class="grid_3Comp">
-                                <label class="inputGrid1_TextTres">Municipio</label>
-                                <label class="inputGrid2_TextTres">Estado</label>
-                                <label class="inputGrid3_TextTres">Ciudad/Localidad</label>
-                                <label class="inputGrid4_TextTres">País</label>
-
                                 <input type="text" id="municipio" name="municipio" placeholder="Municipio"
-                                    class="input3 inputGrid1_Tres">
+                                    class="input3 ">
 
-                                <input type="text" id="estado" name="estado" placeholder="Estado" class="input3 inputGrid2_Tres">
+                                <input type="text" id="estado" name="estado" placeholder="Estado" class="input3 ">
 
                                 <input type="text" id="ciudad" name="ciudad" placeholder="Ciudad/Localidad"
-                                    class="input3 inputGrid3_Tres">
+                                    class="input3 ">
 
 
-                                <select name="pais" id="pais" class="input3 inputGrid4_Tres">
+                                <select name="pais" id="pais" class="input3">
                                     <option id="opcion_pais" value=" ">País</option>
                                     <?php
                                     $query =  $conexion2->query("SELECT * FROM catpaises");
@@ -446,68 +438,47 @@ include('/home3/atinet65/notariosatinet.com.mx/utilerias_appliweb/conexion.php')
                                 </select>
 
                             </div>
-
                             <div class="grid-3">
                                 <input type="button" class="input3" value="Copiar Dirección" id="copy_direccion">
                             </div>
                             <div>
-                                <br>
-                                <span>Domicilio Fiscal</span> <br><br>
+                                <br><br>
+                                <span>Domicilio Fiscal</span> <br>
                             </div>
-
-                            <div class="grid_2Comp">
-                                <label class="inputGrid1_TextDos">Calle</label>
-                                <label class="inputGrid2_TextDos">No. Exterior</label>
-                                <label class="inputGrid3_TextDos">No. Interior</label>
-
+                            <div class="grid-3">
                                 <input type="text" id="calle_fiscal" name="calle_fiscal" placeholder="Calle"
-                                    class="input3 inputGrid1_Dos">
+                                    class="input3">
 
                                 <input type=" text" id="ext_fiscal" name="ext_fiscal" placeholder="No.Ext"
-                                    class="input3 inputGrid2_Dos">
+                                    class="input3">
                                 <input type="text" id="int_fiscal" name="int_fiscal" placeholder="No.Int"
-                                    class="input3 inputGrid3_Dos">
-
-                            </div>
-
-                            <div class="grid_3Comp">
-                                <label class="inputGrid1_TextTres">Manzana</label>
-                                <label class="inputGrid2_TextTres">Lote</label>
-                                <label class="inputGrid3_TextTres">Código Postal</label>
-                                <label class="inputGrid4_TextTres">Colonia</label>
+                                    class="input3">
 
                                 <input type="text" id="manzana_fiscal" name="manzana_fiscal" placeholder="Manzana"
-                                    class="input3 inputGrid1_Tres">
+                                    class="input3">
 
                                 <input type="number" id="lote_fiscal" name="lote_fiscal" placeholder="Lote"
-                                    class="input3 inputGrid2_Tres">
+                                    class="input3 ">
                                 <input type="number" id="cp_fiscal" name="cp_fiscal" placeholder="Codigo Postal"
-                                    class="input3 inputGrid3_Tres" oninput="buscarCodigoYColonias('_fiscal')">
+                                    class="input3 " oninput="buscarCodigoYColonias('_fiscal')">
 
-                                <select name="colonia_fiscal" id="colonia_fiscal" class="input3 inputGrid4_Tres">
+                                <select name="colonia_fiscal" id="colonia_fiscal" class="input3">
                                     <option value="">Selecciona una colonia</option>
                                 </select>
-                            </div>
-
-                            <div class="grid_3Comp">
-                                <label class="inputGrid1_TextTres">Municipio</label>
-                                <label class="inputGrid2_TextTres">Estado</label>
-                                <label class="inputGrid3_TextTres">Ciudad/Localidad</label>
-                                <label class="inputGrid4_TextTres">País</label>
 
                                 <input type="text" id="municipio_fiscal" name="municipio_fiscal" placeholder="Municipio"
-                                    class="input3 inputGrid1_Tres">
+                                    class="input3 ">
 
                                 <input type="text" id="estado_fiscal" name="estado_fiscal" placeholder="Estado"
-                                    class="input3 inputGrid2_Tres">
+                                    class="input3 ">
 
 
                                 <input type="text" id="ciudad_fiscal" name="ciudad_fiscal"
-                                    placeholder="Ciudad/Localidad" class="input3 inputGrid3_Tres">
+                                    placeholder="Ciudad/Localidad" class="input3 ">
 
 
-                                <select name="pais_fiscal" id="pais_fiscal" class="input3 inputGrid4_Tres">
-                                    <option id="opcion_pais_fiscal" value=" ">País</option>
+                                <select name="pais_fiscal" id="pais_fiscal" class=" input3">
+                                    <option id="opcion_pais_fiscal" value=" ">Pais</option>
                                     <?php
                                     $query =  $conexion2->query("SELECT * FROM catpaises");
                                     while ($valores = mysqli_fetch_array($query)) {
@@ -533,46 +504,31 @@ include('/home3/atinet65/notariosatinet.com.mx/utilerias_appliweb/conexion.php')
                     <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                         <div class="accordion-body">
 
-                            <div class="grid_4Comp">
-                                <label class="inputGrid1_TextCuatro">Teléfono</label>
-                                <label class="inputGrid2_TextCuatro">Teléfono Oficina</label>
-                                <label class="inputGrid3_TextCuatro">Teléfono Movil</label>
+                            <div class="grid-1">
                                 <input type="number" id="telefono" name="telefono" maxlength="15" placeholder="Teléfono"
-                                    class="input3 inputGrid1_Cuatro">
+                                    class="input3">
 
                                 <input type="number" id="telefono_oficina" name="telefono_oficina" maxlength="15"
-                                    placeholder="Teléfono Oficina" class="input3 inputGrid2_Cuatro">
-                                <input type="number" id="telefono_movil" name="telefono_movil" maxlength="15"
-                                    placeholder="Teléfono Móvil" class="input3 inputGrid3_Cuatro">
+                                    placeholder="Teléfono Oficina" class="input3">
 
-                            </div>
-                            <div class="grid_1Comp">
-                                <label class="inputGrid1_Text">Correo</label>
-                                <label class="inputGrid2_Text">Correo - 2</label>
+                                <input type="number" id="telefono_movil" name="telefono_movil" maxlength="15"
+                                    placeholder="Teléfono Móvil" class="input3">
 
                                 <input type="email" id="correo" name="correo"
-                                    placeholder="Correo ej: ejemplo@hotmail.com" class="input3 inputGrid1">
+                                    placeholder="Correo ej: ejemplo@hotmail.com" class="input3">
                                 <input type="email" id="correo2" name="correo2"
-                                    placeholder="Correo 2 ej: ejemplo@hotmail.com" class="input3 inputGrid2">
-                            </div>
-                            <div class="grid_1Comp">
-
-                                <label class="inputGrid1_Text">Documento con el que se Identifica</label>
-                                <label class="inputGrid2_Text">Número del Documento de Identificación</label>
+                                    placeholder="Correo 2 ej: ejemplo@hotmail.com" class="input3">
                                 <input type="text" id="identificacion" name="identificacion"
-                                    placeholder="Documento con el que se Identifica" class="input3 inputGrid1">
-                                <input type="text" maxlength="20" id="noidentificacion" name="noidentificacion"
-                                    placeholder="Numero del Documento de Identificación" class="input3 inputGrid2">
+                                    placeholder="Documento con el que se Identifica" class="input3">
 
-                            </div>
-                            <div class="grid_1Comp">
-                                <label class="inputGrid1_Text">Autoridad Emisora</label>
-                                <label class="inputGrid2_Text">Régimen Fiscal</label>
+                                <input type="text" maxlength="20" id="noidentificacion" name="noidentificacion"
+                                    placeholder="Numero del Documento de Identificación" class="input3">
 
                                 <input type="text" id="AutoridadEmisora2" name="AutoridadEmisora2"
-                                    placeholder="Autoridad Emisora" class="input3 inputGrid1">
-                                <select required name="regimen_fiscal_opciones" class="input3 inputGrid2" id="regimen_fiscal">
-                                    <option disabled selected>Régimen Fiscal</option>
+                                    placeholder="Autoridad Emisora" class="input3">
+
+                                <select required name="regimen_fiscal_opciones" class="input3" id="regimen_fiscal">
+                                    <option disabled selected>Regimen Fiscal</option>
                                     <?php
                                     $querycatregimenfiscal =  $conexion2->query("SELECT * FROM catregimenfiscal ORDER BY Clave");
                                     while ($valores = mysqli_fetch_array($querycatregimenfiscal)) {
@@ -583,16 +539,9 @@ include('/home3/atinet65/notariosatinet.com.mx/utilerias_appliweb/conexion.php')
                                     ?>
 
                                 </select>
+                                <input type="text" class="input3" id="ocr" name="ocr" placeholder="ocr">
+                                <input type="text" class="input3" id="idmex" name="idmex" placeholder="idmex">
                             </div>
-                            <div class="grid_1Comp">
-                                <label class="inputGrid1_Text">OCR</label>
-                                <label class="inputGrid2_Text">IDMEX</label>
-
-                                <input type="text" class="input3 inputGrid1" id="ocr" name="ocr" placeholder="ocr">
-                                <input type="text" class="input3 inputGrid2" id="idmex" name="idmex" placeholder="idmex">
-
-                            </div>
-        
                             <div>
                                 <span id="mes_dia_text">Vigencia de la INE</span>
                             </div>
@@ -691,238 +640,239 @@ include('/home3/atinet65/notariosatinet.com.mx/utilerias_appliweb/conexion.php')
 
     <script src="particles/particles.min.js"></script>
     <script>
-        particlesJS({
-            "particles": {
-                "number": {
-                    "value": 152,
-                    "density": {
-                        "enable": true,
-                        "value_area": 800
-                    }
-                },
-                "color": {
-                    "value": "#cfbb73"
-                },
-                "shape": {
-                    "type": "circle",
-                    "stroke": {
-                        "width": 0,
-                        "color": "#000000"
-                    },
-                    "polygon": {
-                        "nb_sides": 5
-                    },
-                    "image": {
-                        "src": "img/github.svg",
-                        "width": 100,
-                        "height": 100
-                    }
-                },
-                "opacity": {
-                    "value": 0.5,
-                    "random": true,
-                    "anim": {
-                        "enable": false,
-                        "speed": 1,
-                        "opacity_min": 0.1,
-                        "sync": false
-                    }
-                },
-                "size": {
-                    "value": 3,
-                    "random": true,
-                    "anim": {
-                        "enable": false,
-                        "speed": 40,
-                        "size_min": 0.1,
-                        "sync": false
-                    }
-                },
-                "line_linked": {
+    particlesJS({
+        "particles": {
+            "number": {
+                "value": 152,
+                "density": {
                     "enable": true,
-                    "distance": 126.26362266116361,
-                    "color": "#b39e53",
-                    "opacity": 0.7260158303016908,
-                    "width": 0.9620472365193136
-                },
-                "move": {
-                    "enable": true,
-                    "speed": 6,
-                    "direction": "none",
-                    "random": false,
-                    "straight": false,
-                    "out_mode": "bounce",
-                    "bounce": false,
-                    "attract": {
-                        "enable": false,
-                        "rotateX": 600,
-                        "rotateY": 1200
-                    }
+                    "value_area": 800
                 }
             },
-            "interactivity": {
-                "detect_on": "canvas",
-                "events": {
-                    "onhover": {
-                        "enable": false,
-                        "mode": "repulse"
-                    },
-                    "onclick": {
-                        "enable": false,
-                        "mode": "push"
-                    },
-                    "resize": true
+            "color": {
+                "value": "#cfbb73"
+            },
+            "shape": {
+                "type": "circle",
+                "stroke": {
+                    "width": 0,
+                    "color": "#000000"
                 },
-                "modes": {
-                    "grab": {
-                        "distance": 400,
-                        "line_linked": {
-                            "opacity": 1
-                        }
-                    },
-                    "bubble": {
-                        "distance": 400,
-                        "size": 40,
-                        "duration": 2,
-                        "opacity": 8,
-                        "speed": 3
-                    },
-                    "repulse": {
-                        "distance": 200,
-                        "duration": 0.4
-                    },
-                    "push": {
-                        "particles_nb": 4
-                    },
-                    "remove": {
-                        "particles_nb": 2
-                    }
+                "polygon": {
+                    "nb_sides": 5
+                },
+                "image": {
+                    "src": "img/github.svg",
+                    "width": 100,
+                    "height": 100
                 }
             },
-            "retina_detect": true
-        })
-
-        document.getElementById("btn_enviar").addEventListener("click", function(event) {
-            // Obtener los valores de los campos
-            const nombre = document.getElementById("nombre").value.trim();
-            const apellidoPaterno = document.getElementById("apellidopat").value.trim();
-            const apellidoMaterno = document.getElementById("apellidomat").value.trim();
-            const curp = document.getElementById("curp").value.trim();
-            const rfc = document.getElementById("rfc").value.trim();
-            const persona = document.getElementById("persona").value;
-
-            let nombre_conyugue = document.getElementById("nombre_conyugue") ? document.getElementById(
-                "nombre_conyugue").value.trim() : "";
-            const civil = document.getElementById("civil").value;
-            let apellidopat_conyugue = document.getElementById("apellidopat_conyugue") ? document.getElementById(
-                "apellidopat_conyugue").value.trim() : "";
-
-            let apellidomat_conyugue = document.getElementById("apellidomat_conyugue") ? document.getElementById(
-                "apellidomat_conyugue").value.trim() : "";
-            var fecha_nac = document.getElementById("dia").value;
-            var mes_dia = document.getElementById("mes_dia").value;
-
-            // Crear un array con los campos faltantes
-            const camposFaltantes = [];
-            const camposFaltantes2 = [];
-            if (persona == 'fisica') {
-                if (!nombre) camposFaltantes.push("Nombre");
-                if (!apellidoPaterno) camposFaltantes.push("Apellido Paterno");
-                if (!apellidoMaterno) camposFaltantes.push("Apellido Materno");
-                if (!curp) camposFaltantes.push("CURP");
-                if (!fecha_nac) camposFaltantes.push("Fecha de Nacimiento");
-                if (civil == "Casado" && nombre_conyugue == "") camposFaltantes.push("Nombre conyugue");
-                if (civil == "Casado" && apellidopat_conyugue == "") camposFaltantes.push(
-                    "Apellido paterno conyugue");
-                if (civil == "Casado" && apellidomat_conyugue == "") camposFaltantes.push(
-                    "Apellido materno conyugue");
-            } else if (persona == 'moral') {
-                if (!nombre) camposFaltantes.push("Denominación Social");
-                if (!fecha_nac) camposFaltantes.push("Fecha de Constitucion")
-            }
-
-
-            // Si hay campos vacíos, mostrar la alerta y prevenir el envío
-            if (camposFaltantes.length > 0) {
-                event.preventDefault(); // Prevenir que el formulario se envíe
-
-                // Construir el mensaje
-                const mensaje = `Los siguientes campos son obligatorios:\n- ${camposFaltantes.join("\n- ")}`;
-
-                // Mostrar alerta tipo toast
-                Swal.fire({
-                    icon: "warning",
-                    title: "¡Atención!",
-                    html: mensaje.replace(/\n/g, "<br>"),
-                    toast: true,
-                    position: "top-end",
-                    timer: 4000,
-                    timerProgressBar: true,
-                    showConfirmButton: false
-                });
-            }
-
-            // Validar CURP
-            if (curp.length > 0 && curp.length < 18 && persona === "fisica") {
-                camposFaltantes2.push("CURP");
-            }
-
-            // Validar RFC
-            if (rfc.length > 0) {
-                if (persona === "fisica" && rfc.length < 13) {
-                    camposFaltantes2.push("RFC");
-                } else if (persona === "moral" && rfc.length < 12) {
-                    camposFaltantes2.push("RFC");
+            "opacity": {
+                "value": 0.5,
+                "random": true,
+                "anim": {
+                    "enable": false,
+                    "speed": 1,
+                    "opacity_min": 0.1,
+                    "sync": false
+                }
+            },
+            "size": {
+                "value": 3,
+                "random": true,
+                "anim": {
+                    "enable": false,
+                    "speed": 40,
+                    "size_min": 0.1,
+                    "sync": false
+                }
+            },
+            "line_linked": {
+                "enable": true,
+                "distance": 126.26362266116361,
+                "color": "#b39e53",
+                "opacity": 0.7260158303016908,
+                "width": 0.9620472365193136
+            },
+            "move": {
+                "enable": true,
+                "speed": 6,
+                "direction": "none",
+                "random": false,
+                "straight": false,
+                "out_mode": "bounce",
+                "bounce": false,
+                "attract": {
+                    "enable": false,
+                    "rotateX": 600,
+                    "rotateY": 1200
                 }
             }
-
-            fecha_nac = new Date(fecha_nac)
-            if (persona === "fisica") {
-                if (fecha_nac < new Date('1900-01-01') || fecha_nac > new Date()) {
-                    camposFaltantes2.push("La fecha de nacimiento debe ser una fecha valida");
-                }
-            } else if (persona === "moral") {
-                if (fecha_nac < new Date('1900-01-01') || fecha_nac > new Date()) {
-                    camposFaltantes2.push("La fecha de constitucion debe ser una fecha valida");
+        },
+        "interactivity": {
+            "detect_on": "canvas",
+            "events": {
+                "onhover": {
+                    "enable": false,
+                    "mode": "repulse"
+                },
+                "onclick": {
+                    "enable": false,
+                    "mode": "push"
+                },
+                "resize": true
+            },
+            "modes": {
+                "grab": {
+                    "distance": 400,
+                    "line_linked": {
+                        "opacity": 1
+                    }
+                },
+                "bubble": {
+                    "distance": 400,
+                    "size": 40,
+                    "duration": 2,
+                    "opacity": 8,
+                    "speed": 3
+                },
+                "repulse": {
+                    "distance": 200,
+                    "duration": 0.4
+                },
+                "push": {
+                    "particles_nb": 4
+                },
+                "remove": {
+                    "particles_nb": 2
                 }
             }
+        },
+        "retina_detect": true
+    })
 
-            const fecha1 = new Date('1900-01-01');
-            const fecha2 = new Date('2100-12-31');
-            const mesAnio = [];
+    document.getElementById("btn_enviar").addEventListener("click", function(event) {
+        // Obtener los valores de los campos
+        event.preventDefault();
+        const nombre = document.getElementById("nombre").value.trim();
+        const apellidoPaterno = document.getElementById("apellidopat").value.trim();
+        const apellidoMaterno = document.getElementById("apellidomat").value.trim();
+        const curp = document.getElementById("curp").value.trim();
+        const rfc = document.getElementById("rfc").value.trim();
+        const persona = document.getElementById("persona").value;
 
-            // Formatear las fechas como "YYYY-MM"
-            mesAnio[0] = fecha1.toISOString().slice(0, 7);
-            mesAnio[1] = fecha2.toISOString().slice(0, 7);
+        let nombre_conyugue = document.getElementById("nombre_conyugue") ? document.getElementById(
+            "nombre_conyugue").value.trim() : "";
+        const civil = document.getElementById("civil").value;
+        let apellidopat_conyugue = document.getElementById("apellidopat_conyugue") ? document.getElementById(
+            "apellidopat_conyugue").value.trim() : "";
 
-            // Validación
-            if (mes_dia.length > 0 && persona === "fisica") { // Corregir comillas faltantes
-                if (mes_dia > mesAnio[1] || mes_dia < mesAnio[0]) {
-                    camposFaltantes2.push("La vigencia debe ser una fecha válida");
-                }
+        let apellidomat_conyugue = document.getElementById("apellidomat_conyugue") ? document.getElementById(
+            "apellidomat_conyugue").value.trim() : "";
+        var fecha_nac = document.getElementById("dia").value;
+        var mes_dia = document.getElementById("mes_dia").value;
+
+        // Crear un array con los campos faltantes
+        const camposFaltantes = [];
+        const camposFaltantes2 = [];
+        if (persona == 'fisica') {
+            if (!nombre) camposFaltantes.push("Nombre");
+            if (!apellidoPaterno) camposFaltantes.push("Apellido Paterno");
+            if (!apellidoMaterno) camposFaltantes.push("Apellido Materno");
+            if (!curp) camposFaltantes.push("CURP");
+            if (!fecha_nac) camposFaltantes.push("Fecha de Nacimiento");
+            if (civil == "Casado" && nombre_conyugue == "") camposFaltantes.push("Nombre conyugue");
+            if (civil == "Casado" && apellidopat_conyugue == "") camposFaltantes.push(
+                "Apellido paterno conyugue");
+            if (civil == "Casado" && apellidomat_conyugue == "") camposFaltantes.push(
+                "Apellido materno conyugue");
+        } else if (persona == 'moral') {
+            if (!nombre) camposFaltantes.push("Denominación Social");
+            if (!fecha_nac) camposFaltantes.push("Fecha de Constitucion")
+        }
+
+
+        // Si hay campos vacíos, mostrar la alerta y prevenir el envío
+        if (camposFaltantes.length > 0) {
+            event.preventDefault(); // Prevenir que el formulario se envíe
+
+            // Construir el mensaje
+            const mensaje = `Los siguientes campos son obligatorios:\n- ${camposFaltantes.join("\n- ")}`;
+
+            // Mostrar alerta tipo toast
+            Swal.fire({
+                icon: "warning",
+                title: "¡Atención!",
+                html: mensaje.replace(/\n/g, "<br>"),
+                toast: true,
+                position: "top-end",
+                timer: 4000,
+                timerProgressBar: true,
+                showConfirmButton: false
+            });
+        }
+
+        // Validar CURP
+        if (curp.length > 0 && curp.length < 18 && persona === "fisica") {
+            camposFaltantes2.push("CURP");
+        }
+
+        // Validar RFC
+        if (rfc.length > 0) {
+            if (persona === "fisica" && rfc.length < 13) {
+                camposFaltantes2.push("RFC");
+            } else if (persona === "moral" && rfc.length < 12) {
+                camposFaltantes2.push("RFC");
             }
+        }
 
-            // Mostrar mensaje si hay campos incompletos
-            if (camposFaltantes2.length > 0) {
-                event.preventDefault(); // Prevenir que el formulario se envíe
-
-                // Construir el mensaje
-                const mensaje = `Los siguientes campos están incompletos:\n- ${camposFaltantes2.join("\n- ")}`;
-
-                // Mostrar alerta tipo toast
-                Swal.fire({
-                    icon: "warning",
-                    title: "¡Atención!",
-                    html: mensaje.replace(/\n/g, "<br>"),
-                    toast: true,
-                    position: "top-end",
-                    timer: 4000,
-                    timerProgressBar: true,
-                    showConfirmButton: false
-                });
+        fecha_nac = new Date(fecha_nac)
+        if (persona === "fisica") {
+            if (fecha_nac < new Date('1900-01-01') || fecha_nac > new Date()) {
+                camposFaltantes2.push("La fecha de nacimiento debe ser una fecha valida");
             }
+        } else if (persona === "moral") {
+            if (fecha_nac < new Date('1900-01-01') || fecha_nac > new Date()) {
+                camposFaltantes2.push("La fecha de constitucion debe ser una fecha valida");
+            }
+        }
 
-        });
+        const fecha1 = new Date('1900-01-01');
+        const fecha2 = new Date('2100-12-31');
+        const mesAnio = [];
+
+        // Formatear las fechas como "YYYY-MM"
+        mesAnio[0] = fecha1.toISOString().slice(0, 7);
+        mesAnio[1] = fecha2.toISOString().slice(0, 7);
+
+        // Validación
+        if (mes_dia.length > 0 && persona === "fisica") { // Corregir comillas faltantes
+            if (mes_dia > mesAnio[1] || mes_dia < mesAnio[0]) {
+                camposFaltantes2.push("La vigencia debe ser una fecha válida");
+            }
+        }
+
+        // Mostrar mensaje si hay campos incompletos
+        if (camposFaltantes2.length > 0) {
+            event.preventDefault(); // Prevenir que el formulario se envíe
+
+            // Construir el mensaje
+            const mensaje = `Los siguientes campos están incompletos:\n- ${camposFaltantes2.join("\n- ")}`;
+
+            // Mostrar alerta tipo toast
+            Swal.fire({
+                icon: "warning",
+                title: "¡Atención!",
+                html: mensaje.replace(/\n/g, "<br>"),
+                toast: true,
+                position: "top-end",
+                timer: 4000,
+                timerProgressBar: true,
+                showConfirmButton: false
+            });
+        }
+
+    });
     </script>
     <script defer src="main_nuevo.js"></script>
     <!-- Import TensorFlow.js library -->
