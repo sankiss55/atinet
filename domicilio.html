@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Procesar Escaneo - Compromise</title>
+</head>
+
+<body>
+    <h1>Extracción de Información desde Escaneo</h1>
+    <p id="output">Esperando análisis...</p>
+
+    <script type="module">
+        // Importamos la librería Compromise
+        import compromise from 'https://cdn.jsdelivr.net/npm/compromise@14.14.3/+esm';
+
+        // Texto de ejemplo obtenido por escaneo
+        const texto = ` 
+           "INSTITUTO FEDERAL ELECTORAL
+MÉXICO
+REGISTRO FEDERAL DE ELECTORES
+CREDENCIAL PARA VOTAR
+NOMBRE
+CORNEJO
+SANCHEZ
+JESSICA ALEJANDRA
+DOMICILIO
+PRIV CIRUELO COND 71 MZ 5 LT 32 CS 344
+FRACC HACIENDA CUAUTITLAN 54803
+CUAUTITLAN ,MEX.
+CLAVE DE ELECTOR CRSNJS78091109M400
+CUR COSJ780911MDFRNS04
+ESTADO 15
+MUNICIPIO 024
+LOCALIDAD 0010
+FECHA DE NACIMIENTO
+11/09/1978
+SEXO M
+ANO DE REGISTRO
+2002 03
+SECCION
+0671"
+        `;
+
+        // Procesamos el texto con Compromise
+        const doc = compromise(texto);
+
+        // Extraemos el nombre completo
+        const nombreCompleto = doc.people().out('array').join(' ');
+
+        // Asumimos que el primer apellido es el primero, el segundo apellido es el segundo, y el resto es el nombre
+        const [apellidoPaterno, apellidoMaterno, ...nombres] = nombreCompleto.split(' ');
+
+        // Unimos los nombres restantes
+        const nombresCompletos = nombres.join(' ');
+
+        // Extraemos la clave de elector
+        const claveElector = texto.match(/CLAVE\s*DE\s*ELECTOR\s*([A-Z0-9]+)/i)?.[1] || ' ';
+
+        // Extraemos el CURP
+        const curp = texto.match(/CURP?\s*[A-Z0-9]{18}/i)?.[0].replace('CURP', '').trim() || ' ';
+
+        // Extraemos la fecha de nacimiento
+        const fechaNacimiento = texto.match(/\d{2}\/\d{2}\/\d{4}/)?.[0] || ' ';
+
+        // Extraemos el sexo
+        const sexo = texto.match(/SEXO\s([MF])/i)?.[1] || ' ';
+
+        // Mostramos los resultados en la página
+        document.getElementById('output').innerText = `
+            Nombres y Apellidos:
+            Apellido Paterno: ${apellidoPaterno}
+            Apellido Materno: ${apellidoMaterno || ''}
+            Nombres: ${nombresCompletos}
+            Clave de elector: ${claveElector}
+            CURP: ${curp}
+            Fecha de nacimiento: ${fechaNacimiento}
+            Sexo: ${sexo}
+        `;
+    </script>
+</body>
+
+</html>
