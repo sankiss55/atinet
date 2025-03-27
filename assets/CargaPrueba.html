@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pruebas</title>
+    <link rel="stylesheet" href="css/manual_style.css">
+    <link rel="stylesheet" href="css/style_ocr.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style2.scss">
+    <link rel="stylesheet" href="css/manual_style.css">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+
+    
+  </head>
+  <body>
+    <div class="manualUso_Contenedor" id="manualUso_Cont">
+      <div class="close_Button_Manual" id="close_Button_Manual">X</div>
+      <div class="index_Manual">
+        <p>Manual de Usuario</p>
+      </div>
+      <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link active"
+            id="home-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#home-tab-pane"
+            type="button"
+            role="tab"
+            aria-controls="home-tab-pane"
+            aria-selected="true"
+          >
+            Indíce
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link"
+            id="profile-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#profile-tab-pane"
+            type="button"
+            role="tab"
+            aria-controls="profile-tab-pane"
+            aria-selected="false"
+          >
+            Bloques
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link"
+            id="contact-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#contact-tab-pane"
+            type="button"
+            role="tab"
+            aria-controls="profile-tab-pane"
+            aria-selected="false"
+          >
+            Botones
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link"
+            id="wa-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#wa-tab-pane"
+            type="button"
+            role="tab"
+            aria-controls="wa-tab-pane"
+            aria-selected="false"
+          >
+            Escáner
+          </button>
+        </li>
+      </ul>
+      <div class="tab-content" id="myTabContent">
+        <div
+          class="tab-pane fade show active"
+          id="home-tab-pane"
+          role="tabpanel"
+          aria-labelledby="home-tab"
+          tabindex="0"
+        >
+          <div class="manualUso_Contenedor2">
+            <div class="text_ManualUso">
+              <ol class="list_Manual">
+                <li>
+                  Llenado de Campos / Bloques
+                  <ol>
+                    <li>
+                      Datos Generales: Tipo de Persona y Datos del Cónyuge
+                    </li>
+                    <li>Domicilio</li>
+                  </ol>
+                </li>
+                <li>Botones: Enviar y Vaciar Datos</li>
+                <li>
+                  Escáner
+                  <ol>
+                    <li>INE IA</li>
+                    <li>QR Escáner</li>
+                  </ol>
+                </li>
+              </ol>
+            </div>
+          </div>
+        </div>
+        <div
+          class="tab-pane fade"
+          id="profile-tab-pane"
+          role="tabpanel"
+          aria-labelledby="profile-tab"
+          tabindex="0"
+        >
+          <div class="manualUso_Contenedor2">
+            <div class="text_ManualUso">
+              <h4 class="titles_Manual">LLenado de campos / Bloques</h4>
+              <p>
+                Al acceder a la página, verás una interfaz que contiene varios
+                campos organizados en bloques desplegables (tipo acordeón):
+                <strong>Datos Generales</strong>, <strong>Domicilio</strong> y
+                <strong>Datos de Contacto</strong>. Cada bloque puede ser
+                abierto o cerrado haciendo clic izquierdo sobre el título del
+                bloque (que aparece en gris). Cuando un bloque está abierto, su
+                título se destacará en color dorado. Si haces clic nuevamente
+                sobre el título de un bloque abierto, este se cerrará, volviendo
+                a su color gris original.
+              </p>
+
+              <p>
+                No te preocupes si cierras un bloque por error; simplemente
+                vuelve a hacer clic en cualquier título de bloque para reabrirlo
+                cuando lo necesites.
+              </p>
+              <h4 class="subTitles_Manual">
+                Datos Generales: Tipo de Persona y Datos del Cónyuge
+              </h4>
+              <p>
+                En el bloque <strong>Datos Generales</strong> encontrarás el
+                campo <strong>Tipo de Persona</strong>, que permite seleccionar
+                entre las opciones "<strong>Persona Física</strong>" y "<strong
+                  >Persona Moral</strong
+                >". Esta elección modificará los campos de los bloques
+                <strong>Datos Generales</strong> y
+                <strong>Datos de Contacto</strong> de acuerdo con la opción
+                seleccionada. Es importante recordar que, al cambiar entre estas
+                opciones, se eliminarán los datos previamente ingresados en
+                ambos bloques.
+              </p>
+
+              <p>
+                En este bloque también encontrarás el campo
+                <strong>Estado Civil</strong>, el cual es de opción múltiple. Si
+                seleccionas "<strong>Casado</strong>", el sistema agregará un
+                nuevo campo denominado "<strong>Tipo de Cónyuge</strong>" y
+                creará un bloque adicional llamado
+                <strong>Datos del Cónyuge</strong>, ubicado debajo de
+                <strong>Datos Generales</strong>, donde podrás ingresar la
+                información correspondiente.
+              </p>
+
+              <h4 class="subTitles_Manual">Domicilio</h4>
+              <p>
+                En el bloque <strong>Domicilio</strong>, el campo
+                <strong>Código Postal</strong> permite
+                <strong>identificar automáticamente la Colonia</strong>
+                correspondiente al código postal ingresado.
+              </p>
+
+              <p>
+                El bloque <strong>Domicilio</strong> está dividido en dos
+                secciones: <strong>Domicilio Particular</strong> y
+                <strong>Domicilio Fiscal</strong>. Al final de cada sección, hay
+                un botón que permite copiar los datos de un bloque al otro (por
+                ejemplo, de <strong>Particular</strong> a
+                <strong>Fiscal</strong> o <strong>viceversa</strong>).
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="tab-pane fade"
+          id="contact-tab-pane"
+          role="tabpanel"
+          aria-labelledby="contact-tab"
+          tabindex="0"
+        >
+          <div class="manualUso_Contenedor2">
+            <div class="text_ManualUso">
+              <h4 class="titles_Manual">Botones: Enviar y Vaciar Datos</h4>
+
+              <p>
+                Fuera de los bloques, en la parte inferior del aplicativo encontrarás los botones <strong>Enviar Datos</strong> y <strong>Vaciar Datos</strong>.
+              </p>
+
+              <ul class="text_ManualUso_Mod_List">
+                <li><strong>Enviar Datos</strong>: Este botón permite enviar la información ingresada a la base de datos correspondiente y genera una notificación por correo electrónico a la notaría. Antes de enviarlo, el sistema verificará que todos los campos obligatorios estén completos. Si falta alguno, aparecerá un cuadro de notificación en la esquina superior derecha, indicando qué campos faltan por completar.</li>
+
+                <li><strong>Vaciar Datos</strong>: Este botón permite borrar todos los datos ingresados en los campos del formulario. Al presionar este botón, se mostrará una notificación que te preguntará si deseas confirmar la acción o cancelarla.</li>
+              </ul>
+
+            </div>
+          </div>
+        </div>
+        <div
+          class="tab-pane fade"
+          id="wa-tab-pane"
+          role="tabpanel"
+          aria-labelledby="wa-tab"
+          tabindex="0"
+        >
+          <div class="manualUso_Contenedor2">
+            <div class="text_ManualUso">
+              <h4 class="titles_Manual"> Escáner</h4>
+
+              <p>
+                El escáner se encuentra en la esquina inferior derecha del aplicativo. Al pasar el cursor sobre el botón, se desplegarán dos opciones: <strong>INE IA</strong> y <strong>QR Escáner</strong>.
+              </p>
+
+              <h4 class="subTitles_Manual">
+                INE IA
+              </h4>
+
+              <p>
+                El servicio <strong>INE IA</strong> utiliza inteligencia artificial para escanear la credencial del INE y transferir automáticamente la información relevante a los campos correspondientes del aplicativo. Para usar esta función:
+              </p>
+
+              <ol class="text_ManualUso_Mod_List">
+                <li>Haz clic en el botón <strong>INE IA</strong>. Aparecerá una ventana emergente pidiendo que <strong>escanees primero la parte frontal</strong> de tu INE</li>
+
+                <li>Selección de Cámara: Asegúrate de que tu navegador haya solicitado permiso para acceder a la <strong>cámara</strong>. Si no has permitido el acceso, selecciona "<strong>Permitir esta vez</strong>" o "<strong>Permitir siempre</strong>".</li>
+
+                <li>Una vez permitido el acceso a la cámara, selecciona la cámara que usarás y haz clic en "<strong>Comenzar</strong>". Verás una vista en vivo de lo que captura la cámara. Asegúrate de que la INE esté <strong>completamente visible</strong> dentro del recuadro mostrado en la ventana emergente.</li>
+
+                <li>La ventana mostrará el texto "<strong>No Estático</strong>". Mantén la <strong>cámara fija</strong> en la INE hasta que el texto cambie a "Estático". Luego, mantén la cámara quieta durante unos segundos para permitir que el sistema realice el <strong>escaneo</strong>.</li>
+
+                <li>Si el sistema detecta que ya hay datos ingresados en los <strong>campos</strong>, se te pedirá <strong>confirmación</strong> para <strong>reemplazar los datos existentes</strong> o <strong>solo completar los campos vacíos</strong>.</li>
+
+                <li>Después del <strong>escaneo</strong>, el sistema <strong>procesará</strong> la información y te notificará si el proceso fue <strong>exitoso</strong>. Luego, el sistema pedirá que <strong>escanees la parte trasera de la INE</strong>, repitiendo el mismo proceso.</li>
+              </ol>
+
+              <h4 class="subTitles_Manual">
+                QR Escáner
+              </h4>
+
+              <p>
+                El QR Escáner permite <strong>escanear códigos QR de documentos oficiales</strong>, como <strong>Actas de Nacimiento</strong>, <strong>CURP</strong>, <strong>Constancias Fiscales</strong> y <strong>Constancias Morales</strong>. Para usarlo:
+              </p>
+
+              <ol class="text_ManualUso_Mod_List">
+                <li>Haz clic en QR Escáner. Aparecerá una ventana emergente <strong>solicitando permiso</strong> para acceder a la cámara. Selecciona "<strong>Permitir esta vez</strong>" o "<strong>Permitir siempre</strong>".</li>
+
+                <li>Después de permitir el acceso a la cámara, <strong>selecciona la cámara</strong> y haz clic en "<strong>Comenzar</strong>". Aparecerá un recuadro con la imagen de la cámara. <strong>Apunta el código QR dentro de este recuadro</strong> para escanearlo.</li>
+
+                <li>El proceso de escaneo <strong>puede tardar algunos segundos</strong>. Una vez escaneado el QR, la ventana emergente se cerrará y comenzará el procesamiento de la información.</li>
+
+                <li>Si ya existen datos en los campos del formulario, el sistema te notificará <strong>si deseas reemplazar los datos existentes</strong> o <strong>solo completar los campos vacíos</strong>.</li>
+
+                <li>Si el usuario intenta escanear una <strong>Constancia Moral</strong> y el bloque <strong>Datos Generales</strong> tiene seleccionada la opción "Persona Física", aparecerá una alerta que indicará la necesidad de <strong>cambiar el tipo de persona</strong> a "<strong>Persona Moral</strong>", y <strong>viceversa</strong>.</li>
+              </ol>
+
+              <hr>
+              <p>
+                Este manual está diseñado para guiarte a través del uso eficiente del aplicativo web. Si tienes alguna pregunta o encuentras algún inconveniente, no dudes en consultar este manual nuevamente o contactar con nuestro soporte técnico.
+              </p>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="button_Manual_Contenedor" id="manualUso_Buttom">
+      <div class="button_Manual_1"><img src="img/informacion.png" alt="Inf"></div>
+      <div class="button_Manual_2"></div>
+      <div class="button_Manual_3"></div>
+      <div class="button_Manual_Text">
+        <p>Manual de usuario</p>
+      </div>
+    </div>
+
+    <script src="js/manual.js"></script>
+  </body>
+</html>
