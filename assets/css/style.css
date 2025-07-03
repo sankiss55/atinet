@@ -3,12 +3,21 @@
   margin: 0;
   padding: 0;
 }
+.select2-container--open .select2-search__field:focus {
+    border: 2px solid red !important;
+    outline: none;
+    box-shadow: none;
+}
+
+.borde-rojo {
+    border: 2px solid red !important;
+}
 
 #ventana_ocr {
   position: fixed;
   display: none;
   width: 80%;
-  height: 55vh;
+  height: fit-content;
   top: 0;
   left: 50%;
   right: 50%;
@@ -21,9 +30,8 @@
 
 #ventana_ocr2 {
   position: fixed;
-
   width: 80%;
-  height: 55vh;
+  height: fit-content;
   top: 0;
   left: 50%;
   right: 50%;
@@ -38,6 +46,7 @@
   position: relative;
   display: grid;
   justify-self: center;
+  justify-items: center;
 }
 .row1 {
   position: relative;
@@ -54,6 +63,7 @@
   box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
   border-radius: 5px;
   transition: 0.5s;
+  margin-bottom: 20px;
 }
 
 .col1 button:hover {
@@ -84,6 +94,17 @@
 .col1 select option {
   background-color: #ebebeb;
 }
+
+.col1 input[type="file"]{
+  border-radius: 10px;
+  padding: 0px 5px 0px 0px;
+  margin-bottom: 10px;
+}
+
+.col1 input[type="file" i] {
+  background-color: gainsboro;
+}
+
 
 .contentVentana {
   position: relative;
@@ -1253,6 +1274,11 @@ label {
     transform: translate(50px, -50px);
   }
 }
+@media only screen and (min-width: 320px) and (max-width: 483px) {
+  .col1 input[type="file" i] {
+  width: 80%;
+}
+}
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
   -webkit-appearance: none;
@@ -1465,7 +1491,25 @@ input[type="number"] {
   transition: 0.5s;
 }
 
+/*1056
 
+*/
+@media only screen and (min-width: 1056px){
+#ventana_ocr{
+  height: fit-content;
+}
+
+.title-ine {
+  background-color: #dc3545;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+#ventana_ocr2{
+  height: fit-content;
+}
+
+}
 
 
 

@@ -1,10 +1,11 @@
 <?php
-//include('/home3/atinet65/notariosatinet.com.mx/utilerias_appliweb/conexion.php');
+// include('/home3/atinet65/notariosatinet.com.mx/utilerias_appliweb/conexion.php');
 include('conexion.php');
 $cp = $_POST['cp'];
 
 // Consulta la base de datos para obtener el código postal
-$sql = "SELECT d_asenta, D_mnpio, d_estado, d_ciudad FROM cat_cp WHERE d_codigo = '$cp'";
+$sql = "SELECT d_asenta, D_mnpio, d_estado, d_ciudad FROM cat_cp WHERE d_codigo = '$cp' ORDER BY d_asenta";
+
 $result = $conexion2->query($sql);
 $colonias = array();
 $municipio = '';
