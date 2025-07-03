@@ -28,7 +28,7 @@ function abrir_Manual(){
         botonManual.removeEventListener("click", abrir_Manual);
         manualDeUso.style.animation = "Close_Manual 0.5s ease forwards";
         floating.style.display="block";
-        document.documentElement.style.overflow = "scroll";
+        document.documentElement.style.overflowY = "scroll";
     }
     
 }
@@ -43,7 +43,7 @@ closeBotonManual.addEventListener("click", function () {
     botonManual.removeEventListener("click", abrir_Manual);
     manualDeUso.style.animation = "Close_Manual 0.5s ease";
     floating.style.display="block";
-    document.documentElement.style.overflow = "scroll";
+    document.documentElement.style.overflowY = "scroll";
 
 });
 

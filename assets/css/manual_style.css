@@ -273,48 +273,6 @@ width: fit-content;
   height: 25px;
 }
 
-
-/* .list_Manual li{
-  display: flex;
-  align-content: flex-start;
-  flex-wrap: wrap;
-  justify-content: space-between;
-} */
-
-/* .list_Manual > li {
-  display: flex;
-  counter-increment: section;
-  font-weight: 700;
-  color: #dc3545;
-}
-
-.list_Manual ol {
-  display: flex;
-  align-content: flex-start;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  padding: 0;
-  margin: 0;
-  list-style-type: none;
-  counter-reset: subsection;
-} */
-
-/* .list_Manual > li::before {
-  content: counter(section) ". ";
-}
-
-
-.list_Manual ol > li {
-  counter-increment: subsection;
-  font-weight: 400;
-  color: #1b1b1b;
-}
-
-.list_Manual ol > li::before {
-  content: counter(section) ". " counter(subsection) " ";
-  font-weight: 700;
-} */
-
 .close_Button_Manual {
   position: fixed;
   font-size: 25px;

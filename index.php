@@ -1300,26 +1300,7 @@ header("Pragma: no-cache");
         // Crear un array con los campos faltantes
         const camposFaltantes = [];
         const camposFaltantes2 = [];
-        if (verificacion_estado_dataList(document.getElementById("pais_nacimeinto_lista").value, document
-                .getElementById("paisnac")) == false) {
-            camposFaltantes.push(
-                "El Pais Ingresado no corresponde al catalogo");
-        }
-        if (verificacion_estado_dataList(document.getElementById("nacionalidad_input").value, document
-                .getElementById("nacionalidad")) == false) {
-            camposFaltantes.push(
-                "La nacionalidad ingresada no corresponde al catalogo");
-        }
-        if (verificacion_estado_dataList(document.getElementById("pais_1").value, document.getElementById(
-                "pais")) == false) {
-            camposFaltantes.push(
-                "El Pais Ingresado no corresponde al catalogo");
-        }
-        if (verificacion_estado_dataList(document.getElementById("pais_fiscal_input").value, document
-                .getElementById("pais_fiscal")) == false) {
-            camposFaltantes.push(
-                "El Pais Ingresado no corresponde al catalogo");
-        }
+       
 
         if (persona == 'fisica') {
             if (!nombre) camposFaltantes.push("Nombre");

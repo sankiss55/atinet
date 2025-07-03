@@ -226,6 +226,11 @@ function IdetificadorDocumento(respuesta) {
 document.getElementById("borrar_datos").addEventListener("click", function (e) {
   e.preventDefault();
   resetForm();
+  
+$('#pais_1').val('').trigger('change');
+$('#pais_fiscal_input').val('').trigger('change');
+$('#pais_nacimeinto_lista').val('').trigger('change');
+$('#nacionalidad_input').val('').trigger('change');
 });
 //RESETEA EL FORMULARIO (EL VALOR DE LOS INPUTS)
 function resetForm() {
